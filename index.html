@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!-- AUDIO -->
+<audio id="bgm" src="assets/music.mp3" loop></audio>
+
+<!-- COUNTDOWN -->
+<section class="countdown reveal">
+  <h2>Menuju Hari Bahagia</h2>
+  <div class="timer">
+    <div><span id="days">0</span><small>Hari</small></div>
+    <div><span id="hours">0</span><small>Jam</small></div>
+    <div><span id="minutes">0</span><small>Menit</small></div>
+    <div><span id="seconds">0</span><small>Detik</small></div>
+  </div>
+</section>
+
+<!-- GALLERY MODAL -->
+<div class="modal" id="imgModal">
+  <span class="close">&times;</span>
+  <img id="modalImg">
+</div>
+
+<!-- RSVP -->
+<section class="rsvp reveal">
+  <h2>Konfirmasi Kehadiran</h2>
+  <a href="https://forms.gle/ISI_FORM_KAMU" target="_blank" class="btn">Isi RSVP</a>
+</section>
+
+<!-- GIFT -->
+<section class="gift reveal">
+  <h2>Wedding Gift</h2>
+  <button onclick="toggleGift()" class="btn">Tampilkan QR</button>
+  <img src="assets/qris.png" id="giftBox">
+</section>
+<!-- OPENING SCREEN -->
+<section class="opening">
+  <div class="opening-content">
+    <p class="to">Kepada Yth.</p>
+    <h2 id="guestName">Nama Tamu</h2>
+    <div class="divider"></div>
+    <button class="enter-btn" onclick="openInvitation()">Buka Undangan</button>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div id="mainContent" class="hidden">
+
+<section class="hero">
+  <div class="hero-text">
+    <h1 class="couple">ARCA<br>&<br>NISA</h1>
+    <p class="date">12 • 12 • 2026</p>
+  </div>
+</section>
+
+<section class="ayat reveal">
+  <p>
+    "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan dari jenismu sendiri agar kamu merasa tenteram kepadanya."
+  </p>
+  <span>QS. Ar-Rum: 21</span>
+</section>
+
+<section class="story reveal">
+  <h2>Our Story</h2>
+  <div class="story-box">
+    <h3>First Meet</h3>
+    <p>Segala sesuatu dimulai tanpa rencana...</p>
+  </div>
+  <div class="story-box">
+    <h3>Commitment</h3>
+    <p>Kami percaya takdir mempertemukan...</p>
+  </div>
+</section>
+
+<section class="gallery reveal">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="assets/gallery1.jpg">
+    <img src="assets/gallery2.jpg">
+    <img src="assets/gallery1.jpg">
+    <img src="assets/gallery2.jpg">
+  </div>
+</section>
+
+<section class="location reveal">
+  <h2>Location</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!" loading="lazy"></iframe>
+</section>
+
+<section class="gift reveal">
+  <h2>Wedding Gift</h2>
+  <img src="assets/qris.png">
+</section>
+
+<footer>
+  <p>© 2026 ARCA & NISA</p>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
