@@ -44,7 +44,7 @@
 
         .opening-content h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: clamp(2rem, 8vw, 4rem);
             letter-spacing: 8px;
             margin: 20px 0;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -162,24 +162,50 @@
             color: #333;
         }
 
-        /* About */
-        .about {
+        /* Couple Photos */
+        .couple-photos {
             display: flex;
-            flex-wrap: wrap;
-            align-items: center;
+            justify-content: center;
             gap: 40px;
+            margin-bottom: 40px;
         }
 
-        .about img {
-            width: 100%;
-            max-width: 300px;
+        .couple-photos img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
             border-radius: 50%;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        .about-content {
-            flex: 1;
-            min-width: 300px;
+        /* Love Story */
+        .love-story {
+            background: #fff;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .story-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .story-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .story-content h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
         }
 
         /* Details */
@@ -200,6 +226,29 @@
             font-size: 2rem;
             color: #8B4513;
             margin-right: 20px;
+        }
+
+        .qr-code {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .qr-code img {
+            width: 150px;
+            height: 150px;
+        }
+
+        /* Gift */
+        .gift {
+            background: #fff;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .gift .qr-code {
+            margin-top: 20px;
         }
 
         /* Gallery */
@@ -277,9 +326,17 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .about {
+            .couple-photos {
+                flex-direction: column;
+                align-items: center;
+            }
+            .story-item {
                 flex-direction: column;
                 text-align: center;
+            }
+            .story-item img {
+                margin-right: 0;
+                margin-bottom: 20px;
             }
             nav ul {
                 flex-direction: column;
@@ -320,8 +377,10 @@
     <nav>
         <ul>
             <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#couple">Couple</a></li>
+            <li><a href="#story">Love Story</a></li>
             <li><a href="#details">Details</a></li>
+            <li><a href="#gift">Gift</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#rsvp">RSVP</a></li>
         </ul>
@@ -335,14 +394,40 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="fade-in-up">
-        <h2 class="section-title">About Us</h2>
-        <div class="about">
-            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Yadi and Yuli">
-            <div class="about-content">
-                <p>Yadi and Yuli are excited to share their love story with you. After years of friendship and adventure, they've decided to take the next step in their journey together.</p>
-                <p>Join us as we celebrate this beautiful union surrounded by the people we cherish most.</p>
+    <!-- Couple Section -->
+    <section id="couple" class="fade-in-up">
+        <h2 class="section-title">Meet the Couple</h2>
+        <div class="couple-photos">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Yadi">
+            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Yuli">
+        </div>
+        <p style="text-align: center; font-size: 1.2rem;">Yadi & Yuli - Two hearts united in love</p>
+    </section>
+
+    <!-- Love Story Section -->
+    <section id="story" class="fade-in-up">
+        <h2 class="section-title">Our Love Story</h2>
+        <div class="love-story">
+            <div class="story-item">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="First Meeting">
+                <div class="story-content">
+                    <h3>How We Met</h3>
+                    <p>Yadi and Yuli first met during a college event. It was love at first sight, and they quickly became inseparable friends before realizing their true feelings for each other.</p>
+                </div>
+            </div>
+            <div class="story-item">
+                <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Proposal">
+                <div class="story-content">
+                    <h3>The Proposal</h3>
+                    <p>Under the stars on a romantic beach getaway, Yadi got down on one knee and asked Yuli to spend the rest of their lives together. It was a moment filled with joy and tears of happiness.</p>
+                </div>
+            </div>
+            <div class="story-item">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Engagement">
+                <div class="story-content">
+                    <h3>Our Journey</h3>
+                    <p>From adventures in the mountains to quiet evenings at home, Yadi and Yuli have built a life full of love, laughter, and unforgettable memories. Now, they're ready to take the next step.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -370,6 +455,10 @@
                 <div>
                     <h3>Venue</h3>
                     <p>Grand Ballroom, Jakarta Convention Center<br>Jl. Jend. Gatot Subroto, Jakarta</p>
+                    <div class="qr-code">
+                        <p>Scan for Map:</p>
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maps.google.com/?q=Jakarta+Convention+Center" alt="QR Code for Venue Map">
+                    </div>
                 </div>
             </div>
             <div class="detail-item">
@@ -378,6 +467,19 @@
                     <h3>Dress Code</h3>
                     <p>Formal Attire</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Section -->
+    <section id="gift" class="fade-in-up">
+        <h2 class="section-title">Wedding Gift</h2>
+        <div class="gift">
+            <p>Your presence is the greatest gift, but if you'd like to give more, you can send your blessings digitally.</p>
+            <p><strong>Bank Transfer:</strong> BCA - 1234567890 (Yadi & Yuli)</p>
+            <div class="qr-code">
+                <p>Scan to Donate:</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://saweria.co/yadiyuli" alt="QR Code for Gift">
             </div>
         </div>
     </section>
@@ -402,64 +504,4 @@
             <input type="number" placeholder="Number of Guests" min="1" required>
             <textarea placeholder="Message (optional)" rows="4"></textarea>
             <button type="submit">Send RSVP</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Yadi & Yuli. All rights reserved.</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-    </footer>
-
-    <script>
-        // Opening screen animation
-        document.getElementById("openBtn").addEventListener("click", function() {
-            const opening = document.getElementById("opening");
-            opening.classList.add("hide");
-            setTimeout(() => {
-                opening.style.display = "none";
-            }, 1500);
-        });
-
-        // Smooth scrolling for navigation
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Form submission (placeholder)
-        document.querySelector('.rsvp-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your RSVP! We\'ll be in touch soon.');
-            this.reset();
-        });
-    </script>
-</body>
-</html>
+        </form
