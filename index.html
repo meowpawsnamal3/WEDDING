@@ -6,117 +6,70 @@
 <title>Yadi & Yuli</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-.opening-screen{
-position:fixed;
-inset:0;
-background:#000;
-color:#fff;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-z-index:9999;
-transition:opacity 1.5s ease;
-}
 
-.opening-screen.hide{
-opacity:0;
-pointer-events:none;
-}
-
-.opening-content h1{
-font-family:'Playfair Display',serif;
-letter-spacing:8px;
-margin:20px 0;
-}
-
-.opening-content button{
-padding:14px 40px;
-background:transparent;
-border:1px solid #fff;
-color:#fff;
-letter-spacing:4px;
-cursor:pointer;
-transition:.4s;
-}
-
-.opening-content button:hover{
-background:#fff;
-color:#000;
-}
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+* { margin:0; padding:0; box-sizing:border-box; }
 
-body{
-background:#F2E9DF;
-font-family:Inter,sans-serif;
-overflow-x:hidden;
+body {
+  background:#F2E9DF;
+  font-family:Inter, sans-serif;
+  overflow-x:hidden;
 }
 
 /* Opening Screen */
-.opening-screen{
-position:fixed;
-inset:0;
-background:#000;
-color:#fff;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-z-index:9999;
-transition:opacity 1.5s ease;
+.opening-screen {
+  position:fixed;
+  inset:0;
+  background:#000;
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  z-index:9999;
+  transition:opacity 1.5s ease;
 }
 
-.opening-screen.hide{
-opacity:0;
-pointer-events:none;
+.opening-screen.hide {
+  opacity:0;
+  pointer-events:none;
 }
 
-.opening-content h1{
-font-family:'Playfair Display',serif;
-letter-spacing:8px;
-margin:20px 0;
+.opening-content h1 {
+  font-family:'Playfair Display', serif;
+  letter-spacing:8px;
+  margin:20px 0;
 }
 
-.opening-content button{
-padding:14px 40px;
-background:transparent;
-border:1px solid #fff;
-color:#fff;
-letter-spacing:4px;
-cursor:pointer;
-transition:.4s;
+.opening-content button {
+  padding:14px 40px;
+  background:transparent;
+  border:1px solid #fff;
+  color:#fff;
+  letter-spacing:4px;
+  cursor:pointer;
+  transition:0.4s;
 }
 
-.opening-content button:hover{
-background:#fff;
-color:#000;
+.opening-content button:hover {
+  background:#fff;
+  color:#000;
 }
 
 /* Hero */
-.hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
+.hero {
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
 }
 
-.hero h1{
-font-family:'Playfair Display',serif;
-font-size:60px;
-letter-spacing:8px;
+.hero h1 {
+  font-family:'Playfair Display', serif;
+  font-size:60px;
+  letter-spacing:8px;
 }
-<script>
-document.getElementById("openBtn").addEventListener("click", function(){
-  const opening = document.getElementById("opening");
-  opening.classList.add("hide");
-
-  setTimeout(() => {
-    opening.style.display = "none";
-  }, 1500);
-});
-</script>
 </style>
 </head>
 
@@ -135,10 +88,9 @@ document.getElementById("openBtn").addEventListener("click", function(){
 </section>
 
 <script>
-document.getElementById("openBtn").addEventListener("click", function(){
+document.getElementById("openBtn").addEventListener("click", function() {
   const opening = document.getElementById("opening");
   opening.classList.add("hide");
-
   setTimeout(() => {
     opening.style.display = "none";
   }, 1500);
