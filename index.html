@@ -1,506 +1,453 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yadi & Yuli - Undangan Pernikahan</title>
-    <meta name="description" content="Undangan pernikahan Yadi dan Yuli. Bergabunglah dalam momen bahagia kami.">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMA Nuurusshidiiq Cirebon | Website Resmi</title>
+  <meta
+    name="description"
+    content="Website resmi SMA Nuurusshidiiq Cirebon: profil sekolah, akademik, PPDB, berita, guru & staff, alumni, dan kontak."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="navbar container" aria-label="Navigasi utama">
+      <a href="#beranda" class="brand" aria-label="Beranda SMA Nuurusshidiiq Cirebon">
+        <span class="brand-logo">NS</span>
+        <span class="brand-text">
+          <strong>SMA Nuurusshidiiq</strong>
+          <small>Cirebon</small>
+        </span>
+      </a>
 
-        body {
-            background: linear-gradient(135deg, #F2E9DF 0%, #E8D5B7 50%, #D4B08A 100%);
-            font-family: 'Inter', sans-serif;
-            color: #333;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
+      <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-        /* Particle Background */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -2;
-        }
+      <ul class="menu" id="mainMenu">
+        <li><a href="#beranda">Beranda</a></li>
 
-        .particle {
-            position: absolute;
-            background: rgba(212, 175, 55, 0.3);
-            border-radius: 50%;
-            animation: float 10s infinite linear;
-        }
+        <li class="has-dropdown">
+          <button class="dropdown-btn">Profil</button>
+          <ul class="dropdown">
+            <li><a href="#tentang">Tentang Sekolah</a></li>
+            <li><a href="#visi-misi">Visi &amp; Misi</a></li>
+            <li><a href="#sejarah">Sejarah</a></li>
+          </ul>
+        </li>
 
-        @keyframes float {
-            0% { transform: translateY(100vh) rotate(0deg); }
-            100% { transform: translateY(-100vh) rotate(360deg); }
-        }
+        <li class="has-dropdown">
+          <button class="dropdown-btn">Akademik</button>
+          <ul class="dropdown">
+            <li><a href="#kalender">Kalender Akademik</a></li>
+            <li><a href="#jadwal">Jadwal Pelajaran</a></li>
+          </ul>
+        </li>
 
-        /* Opening Screen */
-        .opening-screen {
-            position: fixed;
-            inset: 0;
-            background: linear-gradient(135deg, #000 0%, #333 100%);
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            z-index: 9999;
-            transition: opacity 2s ease, transform 2s ease;
-        }
+        <li class="has-dropdown">
+          <button class="dropdown-btn">PPDB</button>
+          <ul class="dropdown">
+            <li><a href="#ppdb-info">Informasi Pendaftaran</a></li>
+            <li><a href="#formulir">Formulir Pendaftaran</a></li>
+          </ul>
+        </li>
 
-        .opening-screen.hide {
-            opacity: 0;
-            transform: scale(1.2) rotate(5deg);
-            pointer-events: none;
-        }
+        <li><a href="#berita">Berita &amp; Pengumuman</a></li>
+        <li><a href="#guru">Guru &amp; Staff</a></li>
+        <li><a href="#alumni">Alumni</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        .opening-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 10vw, 5rem);
-            letter-spacing: 10px;
-            margin: 20px 0;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
-            animation: glow 2s ease-in-out infinite alternate;
-        }
+  <main>
+    <section class="hero" id="beranda">
+      <div class="container hero-content reveal">
+        <span class="badge">Sekolah Unggulan Berbasis Akhlakul Karimah</span>
+        <h1>Masa Depan Cemerlang Dimulai dari Pendidikan Berkualitas</h1>
+        <p>
+          Membentuk generasi berilmu, berakhlak, dan siap menghadapi tantangan global bersama
+          SMA Nuurusshidiiq Cirebon.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#formulir">Daftar Sekarang</a>
+          <a class="btn btn-outline" href="#tentang">Lihat Profil Sekolah</a>
+        </div>
+      </div>
+    </section>
 
-        @keyframes glow {
-            from { text-shadow: 3px 3px 6px rgba(0,0,0,0.7); }
-            to { text-shadow: 3px 3px 6px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.5); }
-        }
+    <section class="section" id="countdown-section">
+      <div class="container">
+        <div class="countdown-box reveal">
+          <h2>Hitung Mundur Pendaftaran Gelombang 1</h2>
+          <p>Penutupan pendaftaran: <strong>30 Juni 2026, 23:59 WIB</strong></p>
+          <div class="countdown-grid" id="countdown">
+            <div><span id="days">00</span><small>Hari</small></div>
+            <div><span id="hours">00</span><small>Jam</small></div>
+            <div><span id="minutes">00</span><small>Menit</small></div>
+            <div><span id="seconds">00</span><small>Detik</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        .opening-content p {
-            font-size: 1.5rem;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-            animation: fadeIn 1s ease-in;
-        }
+    <section class="section bg-light" id="keunggulan">
+      <div class="container">
+        <h2 class="section-title reveal">Keunggulan Sekolah</h2>
+        <div class="card-grid three">
+          <article class="card reveal">
+            <h3>Kurikulum Terpadu</h3>
+            <p>Perpaduan pendidikan agama, akademik, sains, dan teknologi yang seimbang.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Fasilitas Lengkap</h3>
+            <p>Ruang belajar modern, laboratorium komputer, perpustakaan, dan area wifi 24 jam.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Pembinaan Karakter</h3>
+            <p>Program pembentukan akhlakul karimah, disiplin, dan kepemimpinan siswa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        .opening-content button {
-            padding: 16px 50px;
-            background: linear-gradient(45deg, #D4AF37, #FFD700);
-            border: none;
-            color: #000;
-            letter-spacing: 5px;
-            cursor: pointer;
-            transition: all 0.5s ease;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            text-transform: uppercase;
-            border-radius: 50px;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-        }
+    <section class="section" id="tentang">
+      <div class="container two-col">
+        <div class="reveal">
+          <h2 class="section-title">Tentang Sekolah</h2>
+          <p>
+            Yayasan Nuurusshidiiq merupakan lembaga pendidikan yang berdiri sejak tahun 2000,
+            beralamat di Jalan Wiratama Nomor 30, Desa Kedungjaya, Kecamatan Kedawung, Kabupaten
+            Cirebon. Dalam satu naungan Yayasan Nuurusshidiiq menyelenggarakan berbagai jenjang
+            pendidikan, yaitu Pondok Pesantren, PG/TK, SD, SMP, dan SMA.
+          </p>
+          <p>
+            Untuk menunjang kegiatan belajar mengajar (KBM), Yayasan Nuurusshidiiq menyediakan
+            berbagai fasilitas, yaitu gedung milik sendiri, masjid agung, aula serbaguna, ruang
+            belajar ber-AC, sarana olahraga, perpustakaan, laboratorium komputer, taman belajar,
+            taman bermain, mini market, area wifi 24 jam, dan asrama (bagi yang mondok).
+          </p>
+          <p>
+            Sarana dan prasarana tersebut didukung oleh tenaga pendidik dan tenaga kependidikan
+            yang berkualitas, berpengalaman, kompeten, dan kreatif.
+          </p>
+        </div>
+        <div class="facility-gallery reveal">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Gedung sekolah" />
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80" alt="Perpustakaan sekolah" />
+          <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=800&q=80" alt="Laboratorium komputer" />
+          <img src="https://images.unsplash.com/photo-1544717305-996b815c338c?auto=format&fit=crop&w=800&q=80" alt="Kegiatan siswa" />
+        </div>
+      </div>
+    </section>
 
-        .opening-content button:hover {
-            background: linear-gradient(45deg, #FFD700, #D4AF37);
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.4);
-        }
+    <section class="section bg-light" id="visi-misi">
+      <div class="container two-col">
+        <article class="card reveal">
+          <h3>Visi</h3>
+          <p>
+            Menjadi sekolah unggulan yang mencetak pemimpin berakhlakul karimah, berilmu dan ahli
+            di bidangnya.
+          </p>
+        </article>
+        <article class="card reveal">
+          <h3>Misi</h3>
+          <ul class="list">
+            <li>Menjadikan lembaga di bawah naungan yayasan sebagai lembaga berkualitas unggul.</li>
+            <li>Mewujudkan SDM yang tinggi dalam keimanan dan ketakwaan.</li>
+            <li>Membentuk peserta didik berakhlakul karimah.</li>
+            <li>Membekali ilmu agama, pengetahuan umum, sains dan teknologi.</li>
+            <li>Mengembangkan potensi dalam prestasi akademik dan non akademik.</li>
+            <li>Menciptakan generasi mandiri, kreatif, inovatif, disiplin, dan bertanggung jawab.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            z-index: 1000;
-            padding: 20px 0;
-            transition: all 0.3s ease;
-            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
-        }
+    <section class="section" id="sejarah">
+      <div class="container">
+        <h2 class="section-title reveal">Sejarah Singkat</h2>
+        <div class="timeline">
+          <div class="timeline-item reveal"><strong>2000:</strong> Yayasan Nuurusshidiiq didirikan di Kabupaten Cirebon.</div>
+          <div class="timeline-item reveal"><strong>2005:</strong> Pengembangan jenjang pendidikan PG/TK, SD, dan SMP.</div>
+          <div class="timeline-item reveal"><strong>2012:</strong> Peresmian laboratorium komputer dan perpustakaan terpadu.</div>
+          <div class="timeline-item reveal"><strong>2018:</strong> Program penguatan karakter dan digital learning diterapkan.</div>
+          <div class="timeline-item reveal"><strong>2026:</strong> Transformasi layanan informasi dan pendaftaran siswa berbasis web.</div>
+        </div>
+      </div>
+    </section>
 
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
+    <section class="section bg-light" id="kalender">
+      <div class="container">
+        <h2 class="section-title reveal">Kalender Akademik</h2>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr><th>Periode</th><th>Kegiatan</th><th>Tanggal</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Semester Ganjil</td><td>Awal Tahun Ajaran</td><td>15 Juli 2026</td></tr>
+              <tr><td>Semester Ganjil</td><td>Penilaian Tengah Semester</td><td>23 - 27 September 2026</td></tr>
+              <tr><td>Semester Ganjil</td><td>Penilaian Akhir Semester</td><td>2 - 10 Desember 2026</td></tr>
+              <tr><td>Semester Genap</td><td>Awal Semester</td><td>7 Januari 2027</td></tr>
+              <tr><td>Semester Genap</td><td>Ujian Sekolah</td><td>10 - 18 Maret 2027</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-        nav li {
-            margin: 0 30px;
-        }
+    <section class="section" id="jadwal">
+      <div class="container">
+        <h2 class="section-title reveal">Jadwal Pelajaran (Contoh Kelas X)</h2>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr><th>Hari</th><th>07.00 - 09.00</th><th>09.30 - 11.30</th><th>13.00 - 15.00</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Senin</td><td>Matematika</td><td>Bahasa Indonesia</td><td>Fiqih</td></tr>
+              <tr><td>Selasa</td><td>Biologi</td><td>Bahasa Inggris</td><td>Tahfidz</td></tr>
+              <tr><td>Rabu</td><td>Kimia</td><td>Sejarah</td><td>Informatika</td></tr>
+              <tr><td>Kamis</td><td>Fisika</td><td>Sosiologi</td><td>Prakarya</td></tr>
+              <tr><td>Jumat</td><td>PJOK</td><td>PPKn</td><td>Kegiatan Keagamaan</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-        nav a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            position: relative;
-        }
+    <section class="section bg-light" id="ppdb-info">
+      <div class="container">
+        <h2 class="section-title reveal">Informasi Pendaftaran</h2>
+        <div class="card-grid three">
+          <article class="card reveal">
+            <h3>Jadwal</h3>
+            <ul class="list">
+              <li>Gelombang 1: 1 Maret - 30 Juni 2026</li>
+              <li>Gelombang 2: 1 Juli - 31 Agustus 2026</li>
+              <li>Tes Seleksi: Setiap Sabtu</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Syarat</h3>
+            <ul class="list">
+              <li>Mengisi formulir pendaftaran online.</li>
+              <li>Upload scan rapor/ijazah terakhir.</li>
+              <li>Upload kartu keluarga dan akta kelahiran.</li>
+              <li>Pas foto terbaru 3x4.</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Alur Pendaftaran</h3>
+            <ol class="list ordered">
+              <li>Isi formulir pendaftaran secara lengkap.</li>
+              <li>Verifikasi data oleh panitia.</li>
+              <li>Mengikuti tes seleksi/wawancara.</li>
+              <li>Pengumuman hasil seleksi dan daftar ulang.</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 50%;
-            background: #D4AF37;
-            transition: all 0.3s ease;
-        }
+    <section class="section" id="formulir">
+      <div class="container">
+        <h2 class="section-title reveal">Formulir Pendaftaran Siswa Baru</h2>
+        <form id="ppdbForm" class="form card reveal" novalidate>
+          <div class="form-grid">
+            <label>
+              Nama Lengkap
+              <input type="text" name="nama" required />
+            </label>
+            <label>
+              Jenis Kelamin
+              <select name="jk" required>
+                <option value="">Pilih</option>
+                <option>Laki-laki</option>
+                <option>Perempuan</option>
+              </select>
+            </label>
+            <label>
+              Tempat Lahir
+              <input type="text" name="tempat" required />
+            </label>
+            <label>
+              Tanggal Lahir
+              <input type="date" name="tgl" required />
+            </label>
+            <label>
+              Asal Sekolah
+              <input type="text" name="asal" required />
+            </label>
+            <label>
+              Pilihan Jenjang
+              <select name="jenjang" required>
+                <option value="">Pilih Jenjang</option>
+                <option>PG/TK</option>
+                <option>SD</option>
+                <option>SMP</option>
+                <option>SMA</option>
+              </select>
+            </label>
+            <label>
+              Nomor WhatsApp Orang Tua
+              <input type="tel" name="wa" placeholder="08xxxxxxxxxx" pattern="^08[0-9]{8,11}$" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+          </div>
+          <label>
+            Alamat Lengkap
+            <textarea name="alamat" rows="3" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Kirim Pendaftaran</button>
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
 
-        nav a:hover::after {
-            width: 100%;
-            left: 0;
-        }
+    <section class="section bg-light" id="berita">
+      <div class="container">
+        <h2 class="section-title reveal">Berita & Pengumuman</h2>
+        <div class="card-grid three">
+          <article class="card news-card reveal">
+            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="MPLS" />
+            <h3>MPLS Tahun Ajaran 2026/2027 Resmi Dibuka</h3>
+            <p>Program MPLS difokuskan pada adaptasi lingkungan, budaya disiplin, dan penguatan karakter siswa.</p>
+            <button class="link-btn" data-news="1">Baca Detail</button>
+          </article>
+          <article class="card news-card reveal">
+            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80" alt="Lomba" />
+            <h3>Tim Olimpiade Sains Raih Juara Tingkat Kabupaten</h3>
+            <p>Siswa SMA Nuurusshidiiq berhasil membawa pulang medali emas dan perak dalam kompetisi sains.</p>
+            <button class="link-btn" data-news="2">Baca Detail</button>
+          </article>
+          <article class="card news-card reveal">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Pengumuman" />
+            <h3>Jadwal Tes Seleksi Gelombang 1 Diumumkan</h3>
+            <p>Peserta pendaftar gelombang 1 dapat melihat jadwal tes seleksi terbaru melalui portal PPDB sekolah.</p>
+            <button class="link-btn" data-news="3">Baca Detail</button>
+          </article>
+        </div>
 
-        nav a:hover {
-            color: #D4AF37;
-            transform: translateY(-2px);
-        }
+        <article id="newsDetail" class="news-detail card reveal" hidden>
+          <h3 id="newsTitle"></h3>
+          <p id="newsContent"></p>
+        </article>
+      </div>
+    </section>
 
-        /* Hero */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(135deg, rgba(242, 233, 223, 0.9) 0%, rgba(212, 176, 138, 0.9) 100%);
-            position: relative;
-            overflow: hidden;
-        }
+    <section class="section" id="guru">
+      <div class="container">
+        <h2 class="section-title reveal">Guru & Staff</h2>
+        <div class="card-grid four">
+          <article class="card profile-card reveal">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ust. Ahmad Fauzi" />
+            <h3>Ust. Ahmad Fauzi, M.Pd</h3>
+            <p>Kepala Sekolah</p>
+          </article>
+          <article class="card profile-card reveal">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ibu Siti Aisyah" />
+            <h3>Siti Aisyah, S.Pd</h3>
+            <p>Bahasa Indonesia</p>
+          </article>
+          <article class="card profile-card reveal">
+            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Pak Rizki" />
+            <h3>Rizki Maulana, S.Si</h3>
+            <p>Matematika</p>
+          </article>
+          <article class="card profile-card reveal">
+            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Bu Laila" />
+            <h3>Laila Nuraini, S.Kom</h3>
+            <p>Informatika</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.5;
-            z-index: -1;
-            animation: zoom 20s infinite alternate;
-        }
+    <section class="section alumni-section" id="alumni">
+      <div class="container">
+        <h2 class="section-title reveal">Jejak Alumni</h2>
+        <p class="section-subtitle reveal">Alumni kami berkontribusi di berbagai kampus dan dunia kerja profesional.</p>
+        <div class="card-grid three">
+          <article class="card reveal">
+            <h3>Rina Mardiyah (Angkatan 2021)</h3>
+            <p>Status: Mahasiswi Kedokteran - Universitas Padjadjaran</p>
+            <blockquote>“Pembiasaan disiplin di sekolah membantu saya tetap konsisten di perkuliahan.”</blockquote>
+          </article>
+          <article class="card reveal">
+            <h3>Farhan Akbar (Angkatan 2020)</h3>
+            <p>Status: Software Engineer - Startup Edukasi</p>
+            <blockquote>“Pengalaman di laboratorium komputer menjadi fondasi karier saya di bidang teknologi.”</blockquote>
+          </article>
+          <article class="card reveal">
+            <h3>Nabila Rahma (Angkatan 2019)</h3>
+            <p>Status: Guru Bahasa Inggris - Sekolah Swasta Nasional</p>
+            <blockquote>“Nilai akhlak dan kepemimpinan yang dibangun sekolah tetap saya pegang hingga kini.”</blockquote>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        @keyframes zoom {
-            from { transform: scale(1); }
-            to { transform: scale(1.1); }
-        }
+    <section class="section bg-light" id="kontak">
+      <div class="container two-col">
+        <div class="reveal">
+          <h2 class="section-title">Kontak Sekolah</h2>
+          <p><strong>Alamat:</strong> Jalan Wiratama Nomor 30, Desa Kedungjaya, Kecamatan Kedawung, Kabupaten Cirebon.</p>
+          <p><strong>Telepon:</strong> (0231) 123456</p>
+          <p><strong>Email:</strong> info@smanuurusshidiiq.sch.id</p>
+          <form class="form" id="contactForm" novalidate>
+            <label>Nama <input type="text" name="namaKontak" required /></label>
+            <label>Email <input type="email" name="emailKontak" required /></label>
+            <label>Pesan <textarea rows="3" name="pesanKontak" required></textarea></label>
+            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+            <p id="contactMessage" class="form-message"></p>
+          </form>
+        </div>
+        <div class="map-wrap reveal">
+          <iframe
+            title="Peta Lokasi Sekolah"
+            src="https://maps.google.com/maps?q=Cirebon&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(3rem, 8vw, 6rem);
-            letter-spacing: 10px;
-            color: #333;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
-            animation: slideUp 1s ease-out;
-        }
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 SMA Nuurusshidiiq Cirebon. All rights reserved.</p>
+      <a href="#top">Kembali ke atas ↑</a>
+    </div>
+  </footer>
 
-        .hero p {
-            font-size: 1.5rem;
-            margin-top: 30px;
-            color: #555;
-            animation: slideUp 1s ease-out 0.5s both;
-        }
+  <div class="chatbot" id="chatbot">
+    <button class="chat-toggle" id="chatToggle" aria-label="Buka chatbot">💬</button>
+    <div class="chat-panel" id="chatPanel" hidden>
+      <div class="chat-header">Asisten Sekolah</div>
+      <div class="chat-body" id="chatBody">
+        <div class="bot-msg">Assalamu'alaikum, ada yang bisa kami bantu?</div>
+      </div>
+      <div class="chat-actions">
+        <button data-question="cara daftar">Cara daftar</button>
+        <button data-question="jadwal">Jadwal</button>
+        <button data-question="lokasi">Lokasi</button>
+      </div>
+    </div>
+  </div>
 
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Countdown */
-        .countdown {
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .countdown-item {
-            text-align: center;
-            background: rgba(255,255,255,0.95);
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            min-width: 100px;
-            border: 2px solid #D4AF37;
-        }
-
-        .countdown-item span {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #D4AF37;
-        }
-
-        .countdown-item p {
-            font-size: 1rem;
-            margin-top: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #333;
-        }
-
-        /* Music Player */
-        .music-player {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1001;
-            background: linear-gradient(45deg, #D4AF37, #FFD700);
-            border-radius: 50%;
-            width: 70px;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-        }
-
-        .music-player:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        }
-
-        .music-player i {
-            font-size: 1.8rem;
-            color: #000;
-        }
-
-        /* Sections */
-        section {
-            padding: 120px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            text-align: center;
-            margin-bottom: 60px;
-            color: #333;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 4px;
-            background: linear-gradient(45deg, #D4AF37, #FFD700);
-            border-radius: 2px;
-        }
-
-        /* Couple Photos */
-        .couple-photos {
-            display: flex;
-            justify-content: center;
-            gap: 80px;
-            margin-bottom: 60px;
-        }
-
-        .couple-photos img {
-            width: 280px;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 50%;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-            border: 8px solid #FFD700;
-            transition: transform 0.5s ease;
-        }
-
-        .couple-photos img:hover {
-            transform: scale(1.05) rotate(5deg);
-        }
-
-        /* Love Story */
-        .love-story {
-            background: rgba(255,255,255,0.98);
-            border-radius: 25px;
-            padding: 60px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            margin-bottom: 60px;
-            border: 2px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 8px;
-            background: linear-gradient(45deg, #D4AF37, #FFD700);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -4px;
-            border-radius: 4px;
-        }
-
-        .story-item {
-            padding: 20px 50px;
-            position: relative;
-            background: inherit;
-            width: 50%;
-            margin-bottom: 60px;
-        }
-
-        .story-item:nth-child(odd) {
-            left: 0;
-        }
-
-        .story-item:nth-child(even) {
-            left: 50%;
-        }
-
-        .story-item::after {
-            content: '';
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            right: -19px;
-            background: #fff;
-            border: 5px solid #D4AF37;
-            top: 20px;
-            border-radius: 50%;
-            z-index: 1;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .story-item:nth-child(even)::after {
-            left: -16px;
-        }
-
-        .story-item img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 20px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .story-content h3 {
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 20px;
-            color: #D4AF37;
-            font-size: 1.5rem;
-        }
-
-        .story-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        /* Details */
-        .details {
-            background: rgba(255,255,255,0.98);
-            border-radius: 25px;
-            padding: 60px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-            border: 2px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .detail-item {
-            display: flex;
-            align-items: flex-start;
-            padding: 25px;
-            background: linear-gradient(135deg, #FFF8DC 0%, #F5F5DC 100%);
-            border-radius: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-
-        .detail-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-        }
-
-        .detail-item i {
-            font-size: 3rem;
-            color: #D4AF37;
-            margin-right: 25px;
-            margin-top: 10px;
-        }
-
-        .qr-code {
-            margin-top: 25px;
-            text-align: center;
-        }
-
-        .qr-code img {
-            width: 140px;
-            height: 140px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 3px solid #D4AF37;
-        }
-
-        /* Gift */
-        .gift {
-            background: rgba(255,255,255,0.98);
-            border-radius: 25px;
-            padding: 60px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            text-align: center;
-            border: 2px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .gift h3 {
-            font-family: 'Playfair Display', serif;
-            color: #D4AF37;
-            margin-bottom: 20px;
-        }
-
-        .gift p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-        }
-
-        .gift .qr-code {
-            margin-top: 40px;
-        }
-
-        /* Gallery */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 20px;
-            transition: all 0.5s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 2px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-        }
-
-        /* RSVP */
-        .rsvp-form {
-            background: rgba(255,255,255,0.98);
+  <script src="script.js"></script>
+</body>
+</html>
